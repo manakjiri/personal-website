@@ -1,22 +1,20 @@
-name: Jekyll site CI
+name: Build and deploy to manakjiri.cz
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
+  deploy:
 
-    runs-on: ubuntu-latest
+    runs-on: ['self-hosted', 'docker']
+    container: ruby
 
     steps:
       - uses: actions/checkout@v3
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Setup
+        run: bundle install
 
       - name: Build
         run: bundle exec jekyll build --trace
