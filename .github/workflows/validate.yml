@@ -48,4 +48,4 @@ jobs:
         use_magic_file: 1
         extra_dictionary_limit: 10
         check_extra_dictionaries: ''
-        experimental_path: '_posts'
+        experimental_path: '${{ github.workspace }}/_posts'
