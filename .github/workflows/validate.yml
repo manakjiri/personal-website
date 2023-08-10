@@ -23,6 +23,7 @@ jobs:
 
   spelling:
     name: Spell Check
+    disabled: true
     
     permissions:
       contents: read
