@@ -47,5 +47,10 @@ jobs:
         post_comment: 0
         use_magic_file: 1
         extra_dictionary_limit: 10
+        extra_dictionaries:
+          cspell:software-terms/src/software-terms.txt
+          cspell:html/html.txt
+          cspell:ruby/ruby.txt
+          cspell:fullstack/fullstack.txt
+          cspell:filetypes/filetypes.txt
         check_extra_dictionaries: ''
-        experimental_path: '${{ github.workspace }}/_posts'
