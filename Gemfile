@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
+# This is where you manage which Jekyll version is used to run.
 gem "jekyll", "~> 4.3.2"
 
 # Theme

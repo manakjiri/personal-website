@@ -1,0 +1,30 @@
+name: Build and deploy to manakjiri.cz
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+
+    runs-on: ['self-hosted', 'docker']
+    container: ruby
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup
+        run: bundle install
+
+      - name: Build
+        run: bundle exec jekyll build --trace
+      
+      - name: Deploy
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "${{ github.workspace }}/_site"
+          remoteDir: "."
+          options: "--delete --asci"

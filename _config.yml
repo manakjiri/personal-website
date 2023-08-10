@@ -39,6 +39,8 @@ author:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
+  - .gitignore
+  - .github
   - Gemfile
   - Gemfile.lock
+  - README.md
