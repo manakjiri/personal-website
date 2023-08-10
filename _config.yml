@@ -1,0 +1,44 @@
+
+title: &author Jiří Maňák
+email: &email your-email@example.com
+description: &description >- # this means to ignore newlines until "baseurl:"
+  TODO
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://manakjiri.cz" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: &twitter_username manakjiri
+github_username:  &github_username manakjiri
+
+include:
+  - _pages
+
+defaults:
+  # Projects
+  - scope:
+      path: "_posts/projects"
+      type: posts
+    values:
+      permalink: project/:title:output_ext
+      category: projects
+
+# Build settings
+theme: klise
+sass:
+  style: compressed
+
+# Theme specific.
+author:
+  name: *author
+  bio: *description
+  avatar: /assets/img/avatar.jpeg
+  email: *email
+  username: *github_username
+  github: *github_username
+  twitter: *twitter_username
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
