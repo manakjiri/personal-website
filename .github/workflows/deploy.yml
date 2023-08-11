@@ -8,7 +8,10 @@ jobs:
   deploy:
 
     runs-on: ['self-hosted', 'docker']
-    container: ruby
+    container:
+      image: ruby
+      volumes:
+        - /mnt/website_assets:/website_assets
 
     steps:
       - uses: actions/checkout@v3
@@ -35,5 +38,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "~/website_assets"
+          localDir: "/website_assets"
           remoteDir: "assets"
