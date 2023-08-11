@@ -11,7 +11,7 @@ jobs:
     container:
       image: ruby
       volumes:
-        - /mnt/website_assets:/website_assets
+        - /mnt/website_assets:${{ github.workspace }}/website_assets
 
     steps:
       - uses: actions/checkout@v3
@@ -38,5 +38,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "/website_assets"
+          localDir: "${{ github.workspace }}/website_assets"
           remoteDir: "assets"
