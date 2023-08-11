@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup
+      - name: Setup Jekyll
         run: bundle install
 
-      - name: Build
+      - name: Build Site
         run: bundle exec jekyll build --trace
       
-      - name: Deploy
+      - name: Deploy Site
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_SERVER }}
@@ -27,4 +27,13 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: "${{ github.workspace }}/_site"
           remoteDir: "."
-          options: "--delete --asci"
+          options: "--delete"
+
+      - name: Deploy Assets
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "~/website_assets"
+          remoteDir: "assets"
