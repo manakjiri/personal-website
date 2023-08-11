@@ -17,11 +17,19 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Download Assets
+        run: scp -r "jirka@truenas.lan:website_assets/*" ./assets/
+      
       - name: Build Site
         run: bundle exec jekyll build --trace
       
-      - name: Download Assets
-        run: scp -r jirka@truenas.lan:website_assets/* ./_site/assets/
+      - name: Check for missing assets
+        run: |
+          if [ -f _site/missing_assets.txt ]; then
+            echo "Missing assets:"
+            cat _site/missing_assets.txt
+            exit 1
+          fi
 
       - name: Deploy Site
         uses: airvzxf/ftp-deployment-action@latest
