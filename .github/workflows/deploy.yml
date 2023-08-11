@@ -30,11 +30,14 @@ jobs:
           remoteDir: "."
           options: "--delete"
 
+      - name: Link Assets
+        run: ln -s /mnt/website_assets website_assets || exit 0
+      
       - name: Deploy Assets
         uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "/mnt/website_assets"
+          localDir: "website_assets"
           remoteDir: "assets"
