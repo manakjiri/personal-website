@@ -20,6 +20,9 @@ jobs:
       - name: Build Site
         run: bundle exec jekyll build --trace
       
+      - name: Download Assets
+        run: scp -r jirka@truenas.lan:website_assets/* ./_site/assets/
+
       - name: Deploy Site
         uses: airvzxf/ftp-deployment-action@latest
         with:
@@ -29,15 +32,3 @@ jobs:
           local_dir: "./_site"
           remote_dir: "."
           delete: true
-
-      - name: Link Assets
-        run: ln -s /mnt/website_assets ./website_assets || exit 0
-      
-      - name: Deploy Assets
-        uses: airvzxf/ftp-deployment-action@latest
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./website_assets"
-          remote_dir: "assets"
