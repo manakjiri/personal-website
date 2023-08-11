@@ -8,16 +8,14 @@ jobs:
   deploy:
 
     runs-on: ['self-hosted', 'docker']
-    container:
-      image: ruby
-      volumes:
-        - /mnt/website_assets:${{ github.workspace }}/website_assets
 
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Jekyll
-        run: bundle install
+        run: |
+          gem install bundler
+          bundle install
 
       - name: Build Site
         run: bundle exec jekyll build --trace
@@ -28,7 +26,7 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "${{ github.workspace }}/_site"
+          localDir: "_site"
           remoteDir: "."
           options: "--delete"
 
@@ -38,5 +36,5 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "${{ github.workspace }}/website_assets"
+          localDir: "/mnt/website_assets"
           remoteDir: "assets"
