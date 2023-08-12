@@ -1,5 +1,5 @@
 module Jekyll
-  class ImageUrlTag < Liquid::Tag
+  class VideoUrlTag < Liquid::Tag
 
     def initialize(tag_name, name, tokens)
       super
@@ -7,9 +7,9 @@ module Jekyll
     end
 
     def render(context)
-      "/assets/content/images/#{@name}"
+      "/assets/content/videos/#{@name}"
     end
   end
 end
 
-Liquid::Template.register_tag('image_url', Jekyll::ImageUrlTag)
+Liquid::Template.register_tag('video_url', Jekyll::VideoUrlTag)

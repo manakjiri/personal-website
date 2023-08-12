@@ -7,7 +7,7 @@ module Jekyll
     end
 
     def render(context)
-      "/assets/documents/#{@name}"
+      "/assets/content/documents/#{@name}"
     end
   end
 end

@@ -18,7 +18,7 @@ jobs:
           bundle install
 
       - name: Download Assets
-        run: scp -r "jirka@truenas.lan:website_assets/" ./assets
+        run: scp -r jirka@truenas.lan:website_assets/content ./assets
       
       - name: Build Site
         run: bundle exec jekyll build --trace
