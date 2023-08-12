@@ -29,7 +29,7 @@ sass:
 author:
   name: *author
   bio: *description
-  avatar: /assets/images/avatar.jpeg
+  avatar: /assets/content/images/avatar.jpeg
   email: *email
   username: *github_username
   github: *github_username
