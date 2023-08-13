@@ -1,5 +1,5 @@
 module Jekyll
-  content_url = "/assets/content"
+  CONTENT_URL = "/assets/content"
 
   class VideoUrlTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
@@ -8,7 +8,7 @@ module Jekyll
     end
 
     def render(context)
-      "#{@content_url}/videos/#{@name}"
+      "#{CONTENT_URL}/videos/#{@name}"
     end
   end
 
@@ -19,7 +19,7 @@ module Jekyll
     end
 
     def render(context)
-      "#{@content_url}/documents/#{@name}"
+      "#{CONTENT_URL}/documents/#{@name}"
     end
   end
 
@@ -30,7 +30,7 @@ module Jekyll
     end
 
     def render(context)
-      "#{@content_url}/images/#{@name}"
+      "#{CONTENT_URL}/images/#{@name}"
     end
   end
 
@@ -41,7 +41,7 @@ module Jekyll
     end
 
     def render(context)
-      "#{@content_url}/icons/#{@name}"
+      "#{CONTENT_URL}/icons/#{@name}"
     end
   end
 end

@@ -1,7 +1,7 @@
 # Site settings
 title: &author Jiří Maňák
 email: &email manak@z-bionics.com
-description: &description Firmware developer, Maker, Co-founder of Z-Bionics, BSc student at FEL CTU in Prague.
+description: &description Firmware developer, Maker, Co-founder of <a href="https://www.z-bionics.com/" target="_blank" rel="noopener">Z-Bionics</a>, BSc student at <a href="https://kyr.fel.cvut.cz/" target="_blank" rel="noopener">FEL CTU</a> in Prague.
 image: # This image used for Open Graph more info https://ogp.me/
 lang: en-US # default lang
 timezone: Europe/Prague # set your timezone
@@ -27,9 +27,11 @@ defaults:
       permalink: project/:title:output_ext
       category: projects
 
+
 # Build settings
 ignore_theme_config: true
 theme: klise
+number_of_posts: 3 # Homepage limit posts
 sass:
   style: compressed
 

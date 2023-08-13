@@ -6,6 +6,6 @@ RewriteCond %{HTTP_USER_AGENT} !(BlackBerry)
 
 RewriteCond %{HTTP_USER_AGENT} !(Windows\sNT\s5\.[12])
 
-RewriteCond %{HTTP_HOST} ^(www\.)?manakjiri.eu
+RewriteCond %{HTTP_HOST} ^(www\.)?manakjiri.cz
 
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
