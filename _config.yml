@@ -1,16 +1,22 @@
-
+# Site settings
 title: &author Jiří Maňák
 email: &email manak@z-bionics.com
 description: &description Firmware developer, Maker, Co-founder of Z-Bionics, BSc student at FEL CTU in Prague.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://manakjiri.cz" # the base hostname & protocol for your site, e.g. http://example.com
+image: # This image used for Open Graph more info https://ogp.me/
+lang: en-US # default lang
+timezone: Europe/Prague # set your timezone
+repo: https://github.com/manakjiri/personal-website
 username: &username manakjiri
 twitter_username: &twitter_username manakjiri
 github_username:  &github_username manakjiri
 linkedin_username: &linkedin_username manakjiri
 
-include:
-  - _pages
+# URL settings
+url: "https://manakjiri.cz" # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog
+google_analytics: # leave it blank if not used
+fb_appid:
+
 
 defaults:
   # Projects
@@ -22,12 +28,19 @@ defaults:
       category: projects
 
 # Build settings
+ignore_theme_config: true
 theme: klise
 sass:
   style: compressed
 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
+
 # Theme specific.
 author:
+  title: *author
   name: *author
   bio: *description
   avatar: /assets/content/images/avatar.jpeg
@@ -35,6 +48,11 @@ author:
   username: *username
   github: *github_username
   twitter: *twitter_username
+
+
+include:
+  - _pages
+  - .htaccess
 
 # Exclude from processing.
 exclude:
