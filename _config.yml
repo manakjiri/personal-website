@@ -4,8 +4,10 @@ email: &email manak@z-bionics.com
 description: &description Firmware developer, Maker, Co-founder of Z-Bionics, BSc student at FEL CTU in Prague.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://manakjiri.cz" # the base hostname & protocol for your site, e.g. http://example.com
+username: &username manakjiri
 twitter_username: &twitter_username manakjiri
 github_username:  &github_username manakjiri
+linkedin_username: &linkedin_username manakjiri
 
 include:
   - _pages
@@ -30,7 +32,7 @@ author:
   bio: *description
   avatar: /assets/content/images/avatar.jpeg
   email: *email
-  username: *github_username
+  username: *username
   github: *github_username
   twitter: *twitter_username
 
