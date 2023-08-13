@@ -6,6 +6,10 @@
   url: /project-list/
   external: false
 
+- title: references
+  url: /references/
+  external: false
+
 - title: archive
   url: /archive/
   external: false
