@@ -3,7 +3,7 @@ layout: post
 title:  LoRaSTM wireless dev-board
 date:   2021-06-29 00:00:00 +0200
 category: project
-tags: [stm32, linux, iot]
+tags: [stm32, linux, iot, notable-project]
 ---
 
 

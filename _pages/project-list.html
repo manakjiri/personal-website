@@ -5,6 +5,24 @@ layout: page
 excerpt: project list
 ---
 
+<p>You can also view projects grouped by tag <a href="/tags">here</a>.</p>
+
+<h1>Notable projects</h1>
+
+{%- for post in site.categories.project -%}
+{%- if post.tags contains "notable-project" -%}
+<article class="post-item">
+  <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ post.url }}">{{ post.title | escape }}</a>
+  </h4>
+</article>
+{%- endif -%}
+{%- endfor -%}
+
+
+<h1>All projects</h1>
+
 {%- for post in site.categories.project -%}
 <article class="post-item">
   <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
