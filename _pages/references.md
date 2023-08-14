@@ -20,4 +20,4 @@ permalink: /references/
 
 ## [SŠIEŘ Rožnov pod Radhoštěm: Mistrovství ČR v radiotelektronice dětí a mládeže 2019](https://www.roznovskastredni.cz/aktuality/mistrovstvi-cr-v-radiotelektronice-deti-a-mladeze-2019)
 
-Druhé místo v kategorii M s projektem [bluetooth reproduktoru]({% project_url bluetooth-speaker %}).
+Druhé místo v kategorii M s projektem [bluetooth reproduktoru]({% post_url /projects/2019-05-10-bluetooth-speaker%}).

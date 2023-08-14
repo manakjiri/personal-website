@@ -24,12 +24,11 @@ defaults:
       path: "_posts/projects"
       type: posts
     values:
-      permalink: project/:title:output_ext
+      permalink: project/:title/
       category: projects
 
 
 # Build settings
-ignore_theme_config: true
 theme: klise
 number_of_posts: 3 # Homepage limit posts
 sass:

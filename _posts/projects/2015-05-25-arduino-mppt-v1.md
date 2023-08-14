@@ -6,7 +6,7 @@ category: project
 tags: [arduino, solar]
 ---
 
-An MPPT prototype and foundation of the [second version]({% project_url arduino-mppt-v2 %}). I would be repeating myself in documenting this.
+An MPPT prototype and foundation of the [second version]({% post_url /projects/2016-03-05-arduino-mppt-v2 %}). I would be repeating myself in documenting this.
 
 I obviously took some inspiration from Julian Ilett's [MPPT](https://www.youtube.com/watch?v=MSz4-cr3EJw).
 

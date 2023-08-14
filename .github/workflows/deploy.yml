@@ -21,7 +21,7 @@ jobs:
         run: scp -r jirka@truenas.lan:website_assets/content ./assets
       
       - name: Build Site
-        run: bundle exec jekyll build --trace
+        run: bundle exec jekyll build --trace --future --verbose
       
       - name: Check for missing assets
         run: |
