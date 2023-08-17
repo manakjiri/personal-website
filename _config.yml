@@ -2,7 +2,7 @@
 title: &author Jiří Maňák
 email: &email manak@z-bionics.com
 description: &description Firmware developer, Maker, Co-founder of <a href="https://www.z-bionics.com/" target="_blank" rel="noopener">Z-Bionics</a>, BSc student at <a href="https://kyr.fel.cvut.cz/" target="_blank" rel="noopener">FEL CTU</a> in Prague.
-image: # This image used for Open Graph more info https://ogp.me/
+image: /assets/content/images/ogp.png # This image used for Open Graph more info https://ogp.me/
 lang: en-US # default lang
 timezone: Europe/Prague # set your timezone
 repo: https://github.com/manakjiri/personal-website
@@ -24,7 +24,7 @@ defaults:
       path: "_posts/projects"
       type: posts
     values:
-      permalink: project/:title/
+      permalink: "project/:title/"
       category: projects
 
 

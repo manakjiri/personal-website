@@ -40,3 +40,6 @@ jobs:
           local_dir: "./_site"
           remote_dir: "."
           delete: true
+
+      - name: Cleanup Assets
+        run: rm -rf ./assets/content
