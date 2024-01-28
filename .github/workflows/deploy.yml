@@ -17,8 +17,10 @@ jobs:
           gem install bundler
           bundle install
 
-      - name: Download Assets
-        run: scp -r jirka@truenas.lan:website_assets/content ./assets
+      - name: Mount Assets
+        run: |
+          mkdir -p ./assets
+          mount 10.0.0.102:/mnt/lake/jirka/website_assets ./assets
       
       - name: Build Site
         run: bundle exec jekyll build --trace --future --verbose
@@ -41,5 +43,5 @@ jobs:
           remote_dir: "."
           delete: true
 
-      - name: Cleanup Assets
-        run: rm -rf ./assets/content
+      - name: Unmount Assets
+        run: umount ./assets
