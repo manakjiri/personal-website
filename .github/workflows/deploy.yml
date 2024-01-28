@@ -20,7 +20,7 @@ jobs:
       - name: Mount Assets
         run: |
           mkdir -p ./assets
-          mount 10.0.0.102:/mnt/lake/jirka/website_assets ./assets
+          mount truenas.lan:/mnt/lake/jirka/website_assets ./assets
       
       - name: Build Site
         run: bundle exec jekyll build --trace --future --verbose
