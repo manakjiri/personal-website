@@ -8,7 +8,9 @@
 
 ``` shell
 rbenv local
+rbenv install
 gem install bundler
 bundle install
-bundle exec jekyll serve
+# sshfs jirka@truenas.lan:website_assets/content assets/content
+bundle exec jekyll serve --livereload
 ```

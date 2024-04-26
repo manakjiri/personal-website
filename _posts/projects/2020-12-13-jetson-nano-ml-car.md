@@ -18,7 +18,7 @@ The control is split into two parts - a microcontroller for the low layer and re
 	+ It runs nVidia's Jetpack distro which includes [Jetson inference](https://github.com/dusty-nv/jetson-inference) Python package that enables loading and running neural nets
 	+ It's got the [Raspberry pi camera V2](https://www.raspberrypi.org/products/camera-module-v2/) connected to it
 	+ It sends commands and retrieves data from sensors
-	+ And there is my enormous Python script(s) running the whole show including a GUI dashboard
+	+ And there are my Python scripts running the whole show including a GUI dashboard
 * The microcontroller is an [STM32F407](https://www.st.com/en/microcontrollers-microprocessors/stm32f407-417.html) which communicates with the Jetson over USB
 	+ Generates control signals for the stepper motor which drives the whole car and the servo which does the steering
 	+ It receives data over UART from my I2C expansion boards (those are actually STM32F1 boards that emulate a number of I2C buses on their GPIO pins and communicate with [VL53L0X](https://www.adafruit.com/product/3317) ToF distance sensors)
