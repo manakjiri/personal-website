@@ -8,7 +8,9 @@
 
 ``` shell
 rbenv local
+rbenv install
 gem install bundler
 bundle install
+# scp -r jirka@truenas.lan:website_assets/content assets
 bundle exec jekyll serve
 ```
