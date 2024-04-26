@@ -18,9 +18,9 @@ This move to Rust was, for me, a risky one. Most of my experience stems from usi
 
 After playing around with the [Embassy examples](https://github.com/embassy-rs/embassy/tree/main/examples/stm32wl), which are great by the way, written for the [Nucleo-WL55JC](https://www.st.com/en/evaluation-tools/nucleo-wl55jc.html) board, I concluded that it is possible to continue. Though risky, the opportunity to learn something new and possibly help the community develop it outweighed most of the downsides.
 
-At the **end of October**, I was sending my designs of the v0.1 LoRa module, based on the STM32WLE55 SoC, to PCBWay for manufacturing and assembly. All details about the various design choices can be found in the thesis in Chapter 3 and the design itself is hosted on [GitHub](https://github.com/manakjiri/soil-sensor-hw). I prioritized the hardware design, because I knew the lead-times were long and could possibly stretch longer unexpectedly.
+At the **end of October**, I was sending my designs of the v0.1 LoRa module, based on the STM32WLE55 SoC, to PCBWay for manufacturing and assembly. All details about the various design choices can be found in the thesis in Chapter 3 and the design itself is hosted on [GitHub](https://github.com/manakjiri/lora-module-hw). I prioritized the hardware design, because I knew the lead-times were long and could possibly stretch longer unexpectedly.
 
-While I was waiting for the prototypes to arrive, I worked on the firmware itself. Having tested the basic backbone stuff, such as radio settings, on the Nucleo dev board, I setup the [firmware repo](https://github.com/manakjiri/soil-sensor-fw) and split the code into "runtime" and "applications". The split was done in an anticipation of a lot of similarity between the "node" and the "gateway" code and is talked about in the thesis in more detail.
+While I was waiting for the prototypes to arrive, I worked on the firmware itself. Having tested the basic backbone stuff, such as radio settings, on the Nucleo dev board, I setup the [firmware repo](https://github.com/manakjiri/lora-module-fw) and split the code into "runtime" and "applications". The split was done in an anticipation of a lot of similarity between the "node" and the "gateway" code and is talked about in the thesis in more detail.
 
 ![]({% image_url bcs-thesis/module-v0.1.drawio.svg %})
 
