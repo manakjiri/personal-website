@@ -20,8 +20,8 @@ jobs:
 
       - name: Mount Assets
         run: |
-          mkdir -p ./assets
-          mount truenas.lan:/mnt/lake/jirka/website_assets ./assets
+          mkdir -p ./assets/content
+          mount ./assets/content
       
       - name: Build Site
         run: bundle exec jekyll build --trace --future --verbose
@@ -45,4 +45,4 @@ jobs:
           delete: false
 
       - name: Unmount Assets
-        run: umount ./assets
+        run: umount ./assets/content
