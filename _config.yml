@@ -13,7 +13,7 @@ linkedin_username: &linkedin_username manakjiri
 
 # URL settings
 url: "https://manakjiri.cz" # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 google_analytics: # leave it blank if not used
 fb_appid:
 
