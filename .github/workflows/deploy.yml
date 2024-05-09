@@ -45,4 +45,5 @@ jobs:
           delete: false
 
       - name: Unmount Assets
+        if: always()
         run: umount ./assets/content
