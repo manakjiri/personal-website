@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Obstacle avoidance robot
-date:   2016-05-11 00:00:00 +0200
 category: project
 tags: [arduino, robotics]
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Arduino-based multicell Li-Po or Lead-acid battery 
-date:   2016-07-23 00:00:00 +0200
 category: project
 tags: [arduino, notable-project]
 ---

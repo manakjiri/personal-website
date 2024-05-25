@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Arduino-based MPPT battery solar charge controller v1.0
-date:   2015-05-25 00:00:00 +0200
 category: project
 tags: [arduino, solar]
 ---

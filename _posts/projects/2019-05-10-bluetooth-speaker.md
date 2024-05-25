@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Portable Bluetooth speaker
-date:   2019-07-10 00:00:00 +0200
 category: project
 tags: [arduino, notable-project]
 ---

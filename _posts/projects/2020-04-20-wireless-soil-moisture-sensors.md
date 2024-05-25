@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Wireless soil moisture sensors
-date:   2020-04-20 00:00:00 +0200
 category: project
 tags: [stm32]
 ---

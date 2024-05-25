@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Coincell keychain flashlight
-date:   2019-11-02 00:00:00 +0200
 category: project
 tags: [stm32]
 ---

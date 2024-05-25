@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Arduino Smart Watch
-date:   2015-10-30 00:00:00 +0200
 category: project
 tags: [arduino]
 ---

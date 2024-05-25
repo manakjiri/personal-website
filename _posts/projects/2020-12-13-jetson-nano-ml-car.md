@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Jetson Nano powered RC car
-date:   2020-12-13 00:00:00 +0200
 category: project
 tags: [ml, stm32, linux, rc]
 ---
