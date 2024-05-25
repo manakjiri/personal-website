@@ -83,7 +83,7 @@ tags: [university, stm32, iot, notable-project]
         }
     });
 
-    const url = "ws://new-horizons.lumias.cz:8765";
+    const url = "wss://new-horizons.lumias.cz:8765";
     var ws = null;
     function connect() {
         console.log('Connecting to', url);
