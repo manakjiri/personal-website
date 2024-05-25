@@ -4,7 +4,7 @@ module Jekyll
   class VideoUrlTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
       super
-      @name = name
+      @name = name.strip
     end
 
     def render(context)
@@ -15,7 +15,7 @@ module Jekyll
   class DocumentUrlTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
       super
-      @name = name
+      @name = name.strip
     end
 
     def render(context)
@@ -26,7 +26,7 @@ module Jekyll
   class ImageUrlTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
       super
-      @name = name
+      @name = name.strip
     end
 
     def render(context)
@@ -37,7 +37,7 @@ module Jekyll
   class IconUrlTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
       super
-      @name = name
+      @name = name.strip
     end
 
     def render(context)

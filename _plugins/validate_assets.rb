@@ -9,7 +9,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
     # Check if each asset reference exists in the assets directory
     missing_assets = asset_references.reject do |asset|
-        File.exist?(File.join(site.source, "assets", asset))
+        File.exist?(File.join(site.source, "assets", asset.strip))
     end
 
     # Save missing assets
