@@ -6,19 +6,20 @@ permalink: /about/
 
 ## Specialization
 
-Embedded C++ on STM32, adapting and using modern practices of software development in embedded systems, such as unit testing and CI/CD with HIL testing, to aid with developement and maintenance of complex systems.
+Embedded C++ and Rust on STM32, adapting and using modern practices of software development in embedded systems, such as unit testing and CI/CD with HIL testing, to aid with development and maintenance of complex systems.
 
 ## Interests
 
-Has a broad understanding of embedded systems, from hardware design (priciples of semiconductors, FPGAs, analog and digital circuits, building prototypes and hardware bring-up), through computer and software architecture, all the way to the product life-cycle, manufacturing constraints and customer needs.
+Has a broad understanding of embedded systems, from hardware design (priciples of semiconductors, FPGAs, analog and digital circuits, building prototypes and hardware bring-up), through computer and software architecture, all the way to the product life-cycle, real-world manufacturing constraints and customer needs.
 
+Also likes to venture into high-performance backend services, deployment and applications of machine learning, cloud computing, and many more things.
 
 ## Work Experience
 
-__Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Dec 2020 - now)__
+__Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Jul 2022 - now)__
 
 - Architecting and developing firmware for myoelectric hand prosthesis
-- Team of two firmware developers, a hardware designer and a full-stack web developer
+- Leading a team of two firmware developers, a hardware designer and a full-stack web developer
 - Overlooking quality assurance and testing, CI/CD and documentation
 - Coordinating design and manufacturing with other teams and external partners
 
@@ -44,8 +45,8 @@ __Intern at [egmenergo](https://www.egmenergo.cz/) (Jul 2019 – Aug 2019)__
 
 ## Education
 
-__Faculty of Electrical Engineering CTU (2020 - now)__
-- Cybernetics and Robotics (BCs)
+__Faculty of Electrical Engineering CTU (2020 - 2024)__
+- Cybernetics and Robotics (BSc) [[bachelor's thesis blog post]]({% post_url /projects/2024-04-25-bcs-thesis %})
 
 
 __Grammar School Uherské Hradiště (2012 - 2020)__

@@ -86,34 +86,27 @@ tags: [university, stm32, iot, notable-project]
     const url = "wss://new-horizons.lumias.cz:8765";
     var ws = null;
     function connect() {
-        console.log('Connecting to', url);
         ws = new WebSocket(url);
-        ws.onopen = () => {
-            console.log('Connected to server');
-        };
+        ws.onopen = () => {};
         ws.onclose = () => {
-            console.log('Disconnected from server');
             ws = null;
             setTimeout(function() {
                 connect();
             }, 5000);
         };
         ws.onerror = (event) => {
-            console.error('Websocket error:', event);
             ws.close();
         };
         ws.onmessage = (event) => {
             const msg = JSON.parse(event.data);
-            document.getElementById('zone1').innerText = msg.zones[0] + " %";
-            document.getElementById('zone2').innerText = msg.zones[1] + " %";
-            document.getElementById('zone3').innerText = msg.zones[2] + " %";
-            document.getElementById('zone4').innerText = msg.zones[3] + " %";
-            
+            msg.zones.forEach((zone, index) => {
+                document.getElementById('zone' + (index + 1)).innerText = zone + " %";
+            });
             myChart.data.labels.push(new Date().toISOString());
-            myChart.data.labels = myChart.data.labels.slice(-30);
+            myChart.data.labels = myChart.data.labels.slice(-15);
             myChart.data.datasets.forEach((dataset, index) => {
                 dataset.data.push(msg.zones[index]);
-                dataset.data = dataset.data.slice(-30);
+                dataset.data = dataset.data.slice(-15);
             });
             myChart.update();
         };
@@ -121,7 +114,7 @@ tags: [university, stm32, iot, notable-project]
     connect();
 </script>
 
-These are the live readings from the soil moisture sensor. The chart shows the relative moisture saturation, as measured by the sensor on the right. Colors correspond to the depth. The sensor communicates with the LoRa Nucleo board connected to a Raspberry Pi, which then forwards the data to this website.
+These are the live readings from the soil moisture sensor. The chart shows the relative moisture saturation, as measured by the sensor depicted on the right. Colors correspond to the depth of the capacitive sensing zone. The sensor communicates with the LoRa Nucleo board connected to a Raspberry Pi, which then forwards the data to this website.
 
 # Introduction
 
