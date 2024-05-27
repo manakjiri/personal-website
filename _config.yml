@@ -1,11 +1,12 @@
 # Site settings
 title: &author Jiří Maňák
-email: &email manak@z-bionics.com
+tagline: Personal Portfolio and Blog
 description: &description Freelance programmer, Maker, BSc student at <a href="https://kyr.fel.cvut.cz/" target="_blank" rel="noopener">FEL CTU</a> in Prague.
 image: /assets/content/images/ogp.png # This image used for Open Graph more info https://ogp.me/
 lang: en-US # default lang
 timezone: Europe/Prague # set your timezone
 repo: https://github.com/manakjiri/personal-website
+email: &email manak@z-bionics.com
 username: &username manakjiri
 twitter_username: &twitter_username manakjiri
 github_username:  &github_username manakjiri
