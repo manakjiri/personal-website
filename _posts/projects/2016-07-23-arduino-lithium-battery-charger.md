@@ -9,7 +9,7 @@ This is a 240 W battery charger with lithium battery charging and cell balancing
 
 ![]({% image_url lipo-charger/charger.jpg %})
 
-I'm not even sure why I made it. Of course it is much easier (and safer most likely) to buy a proper battery charger (which I later bought anyway. Not because this one didn't work, I just needed more chargers). I certainly learned a lot about floating differential measurement, when measuring the individual cell voltages, and design of switching DC-DC converters in the process, so it was worth it.
+I'm not even sure why I made it. Of course, it is much easier (and safer most likely) to buy a proper battery charger (which I later bought anyway. Not because this one didn't work, I just needed more chargers). I certainly learned a lot about floating differential measurement, when measuring the individual cell voltages, and the design of switching DC-DC converters in the process, so it was worth it.
 
 [Dokumentace Li-Po nabijecka]( {% document_url dokumentace_li-po_nabijecka_2017.pdf %})
 
