@@ -159,3 +159,7 @@ The Raspberry Pi Pico at the bottom served as a data logger, measuring the volta
 
 <!-- # Final remarks -->
 
+# Documents
+
+- [Thesis]({% document_url bcs-thesis.pdf %})
+- [Defense presentation]({% document_url bcs-thesis-presentation.pdf %})
