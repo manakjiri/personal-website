@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bachelor Project - Sensor Network for Smart Agriculture
-date: 2024-05-25 00:00:00 +0100
+modified: 2024-05-25 00:00:00 +0100
 category: project
 tags: [university, stm32, iot, notable-project]
 ---

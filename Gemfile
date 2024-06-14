@@ -12,3 +12,6 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
 end
+
+# archlinux does not install json by default
+gem "json"
