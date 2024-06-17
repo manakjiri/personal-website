@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Arduino-based multicell Li-Po or Lead-acid battery 
+title:  Arduino-based multicell Li-Po or Lead-acid battery charger
 category: project
 tags: [arduino, notable-project]
 ---
