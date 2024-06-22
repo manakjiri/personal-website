@@ -53,7 +53,7 @@ Throughout the project I needed to balance spending time on it, working around t
 
 # Documents
 
-- [Thesis]({% document_url bcs-thesis.pdf %}), ([official source](https://dspace.cvut.cz/))
+- [Thesis]({% document_url bcs-thesis.pdf %}), ([official source - ČVUT DSpace](https://dspace.cvut.cz/handle/10467/115265))
 - [Supervisor's opinion]({% document_url bcs-thesis-supervisor.pdf %}), [opponent's opinion]({% document_url bcs-thesis-opponent.pdf %})
 - [Defense presentation]({% document_url bcs-thesis-presentation.pdf %}), [transcript]({% document_url bcs-thesis-transcript.pdf %})
 
