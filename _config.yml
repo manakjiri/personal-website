@@ -1,7 +1,7 @@
 # Site settings
 title: &author Jiří Maňák
 tagline: Personal Portfolio and Blog
-description: &description Freelance programmer, Maker of things, Tech enthusiast.
+description: &description Maker of things who strives to take part in creating great products.
 image: /assets/content/images/ogp.png # This image used for Open Graph more info https://ogp.me/
 lang: en-US # default lang
 timezone: Europe/Prague # set your timezone

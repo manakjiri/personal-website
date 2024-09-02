@@ -10,9 +10,9 @@ Embedded C++ and Rust on STM32, adapting and using modern practices of software 
 
 ## Interests
 
-Has a broad understanding of embedded systems, from hardware design (priciples of semiconductors, FPGAs, analog and digital circuits, building prototypes and hardware bring-up), through computer and software architecture, all the way to the product life-cycle, real-world manufacturing constraints and customer needs.
+Has a broad understanding of embedded systems, from hardware design (principles of semiconductors, FPGAs, analog and digital circuits, building prototypes, and hardware bring-up), through computer and software architecture, all the way to the product life-cycle, real-world manufacturing constraints, and customer needs.
 
-Also likes to venture into high-performance backend services, deployment and applications of machine learning, cloud computing, and many more.
+Also likes to venture into high-performance backend services, deployment and applications of machine learning, cloud computing, and more.
 
 ## Work Experience
 
