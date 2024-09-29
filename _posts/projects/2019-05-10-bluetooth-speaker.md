@@ -5,7 +5,7 @@ category: project
 tags: [arduino, notable-project]
 ---
 
-![]({% asset 2023/bluetooth-speaker/bt_speaker.jpg %})
+![Bluetooth speaker]({% asset 2023/bluetooth-speaker/bt_speaker.jpg %})
 
 * Amplifiers: **2x10W** AB class
 * Battery: **37 Wh** 3-cell Li-Ion
@@ -20,7 +20,6 @@ Almost everything is custom designed (except the Bluetooth module and the two po
 
 Participated in the electronics [competition](https://www.roznovskastredni.cz/aktuality/mistrovstvi-cr-v-radiotelektronice-deti-a-mladeze-2019) in Rožnov pod Radhoštěm. [Dokumentace reproduktor 2019]({% asset 2023/bluetooth-speaker/dokumentace_reproduktor_2019.pdf %}).
 
-![Bluetooth speaker]({% asset 2023/bluetooth-speaker/bt_speaker.jpg %})
 ![Bluetooth speaker]({% asset 2023/bluetooth-speaker/dokumentace_reproduktor_2019.pdf %})
 ![Bluetooth speaker]({% asset 2023/bluetooth-speaker/speaker_diagram_cz.jpg %})
 ![Bluetooth speaker]({% asset 2023/bluetooth-speaker/speaker_inside_1.jpg %})
