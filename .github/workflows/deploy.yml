@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,10 +24,27 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Build & Deploy Worker
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: _site/
+          name: webroot
+          retention-days: 3
+          overwrite: true
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: webroot
+          path: webroot
+
+      - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
-        if: github.event_name == 'push'
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=manakjiri-website --commit-dirty=true
+          command: pages deploy webroot --project-name=manakjiri-website --commit-dirty=true
