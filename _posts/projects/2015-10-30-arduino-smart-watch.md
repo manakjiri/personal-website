@@ -5,6 +5,7 @@ category: project
 tags: [arduino]
 ---
 
+![Smartwatch]({% asset 2023/smartwatch/smartwatch_tick.gif %})
 
 * Arduino pro mini
 * 0.96" OLED display
@@ -12,4 +13,5 @@ tags: [arduino]
 * NRF24L01+ 2.4GHz wireless TRX module
 * Li-Po battery /w protection and charging board
 
-{% include image-gallery.html folder="smartwatch" %}
+![Smartwatch]({% asset 2023/smartwatch/arduino_smartwatch.jpg %})
+![Smartwatch]({% asset 2023/smartwatch/arduino_smartwatch_2.jpg %})

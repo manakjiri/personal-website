@@ -20,30 +20,30 @@ This move to Rust was, for me, a risky one. Most of my experience stems from usi
 
 After playing around with the [Embassy examples](https://github.com/embassy-rs/embassy/tree/main/examples/stm32wl), which are great by the way, written for the [Nucleo-WL55JC](https://www.st.com/en/evaluation-tools/nucleo-wl55jc.html) board, I concluded that it is possible to continue. Though risky, the opportunity to learn something new and possibly help the community develop outweighed most downsides.
 
-At the **end of October**, I sent my designs of the v0.1 LoRa module, based on the STM32WLE55 SoC, to PCBWay for manufacturing and assembly. All details about the various design choices can be found [in the thesis]({% document_url bcs-thesis.pdf %}) in Chapter 3 and the design itself is hosted on [GitHub](https://github.com/manakjiri/lora-module-hw). I prioritized the hardware design because I knew the lead times were long and could stretch longer unexpectedly.
+At the **end of October**, I sent my designs of the v0.1 LoRa module, based on the STM32WLE55 SoC, to PCBWay for manufacturing and assembly. All details about the various design choices can be found [in the thesis]({% asset 2024/bcs-thesis/bcs-thesis.pdf %}) in Chapter 3 and the design itself is hosted on [GitHub](https://github.com/manakjiri/lora-module-hw). I prioritized the hardware design because I knew the lead times were long and could stretch longer unexpectedly.
 
-While I was waiting for the prototypes to arrive, I worked on the firmware itself. Having tested the basic backbone stuff, such as radio settings, on the Nucleo dev board, I set up the [firmware repo](https://github.com/manakjiri/lora-module-fw) and split the code into "runtime" and "applications". The split was done in anticipation of a lot of similarity between the "node" and the "gateway" code and is talked about [in the thesis]({% document_url bcs-thesis.pdf %}) in more detail.
+While I was waiting for the prototypes to arrive, I worked on the firmware itself. Having tested the basic backbone stuff, such as radio settings, on the Nucleo dev board, I set up the [firmware repo](https://github.com/manakjiri/lora-module-fw) and split the code into "runtime" and "applications". The split was done in anticipation of a lot of similarity between the "node" and the "gateway" code and is talked about [in the thesis]({% asset 2024/bcs-thesis/bcs-thesis.pdf %}) in more detail.
 
-![]({% image_url bcs-thesis/module-v0.1.drawio.svg %})
+![]({% asset 2024/bcs-thesis/module-v0.1.drawio.svg %})
 
 Finished prototypes arrived at the **end of November**. I immediately hit a snag, where the [lora-rs](https://github.com/lora-rs/lora-rs) library (previously part of the embassy project) only supported TCXO as the main system clock. Due to the way STM32WLE handles the clock, this caused an incompatibility with my hardware and I had to resort to swapping the on-module crystal oscillator with a TCXO to get the module up and running. However, the lora-rs project is in active development and this functionality was later added by a member of the community.
 
-Implementation of the OTA update protocol was done during **December and early January**. In January a mid-project presentation was to take place, so I figured it would be interesting to demonstrate the OTA update functionality by transferring a screen buffer instead of the actual binary so that the self-correcting feature of the protocol [could be seen in action]({% video_url lora_ota_demo.mp4 %}). In the video it is apparent, that the stream of the frame buffer chunks goes out for a while, then one comes out of order and then the missing two pieces are filled in. In practice, this means that you can have an inferior connection, but all that will do is slow down the update process and not cause any corruption of data.
+Implementation of the OTA update protocol was done during **December and early January**. In January a mid-project presentation was to take place, so I figured it would be interesting to demonstrate the OTA update functionality by transferring a screen buffer instead of the actual binary so that the self-correcting feature of the protocol [could be seen in action]({% asset 2024/bcs-thesis/lora_ota_demo.mp4 %}). In the video it is apparent, that the stream of the frame buffer chunks goes out for a while, then one comes out of order and then the missing two pieces are filled in. In practice, this means that you can have an inferior connection, but all that will do is slow down the update process and not cause any corruption of data.
 
 I did not have time to work on the thesis during the end of the winter semester due to all the exams. The soil moisture sensor concept and design work was done during **March**, it was sent off to PCBWay at the end of the month.
 
-![]({% image_url bcs-thesis/soil-sensor-F_Cu.svg %})
+![]({% asset 2024/bcs-thesis/soil-sensor-F_Cu.svg %})
 
 While I waited for the hardware to arrive, I started to work on the thesis itself. I started with one of the university LaTeX templates, which I ended up needing to modify to comply with the university guidelines. I could not help myself but also set up a simple CI/CD pipeline on [GitHub](https://github.com/manakjiri/bcs-thesis), that built the thesis and uploaded it to this site. I knew I would need to share it quite often with other people and figured, that it would be great if I did not need to worry about keeping it up to date.
 
 This also proved useful for fulfilling one particular curiosity:
-![]({% image_url bcs-thesis/thesis_stats.svg %})
+![]({% asset 2024/bcs-thesis/thesis_stats.svg %})
 This was generated by a script, which walked the git commit history, one commit at a time, and since the thesis build process was set in stone by the pipeline, the script simply built every commit and then analyzed it using the pypdf library. But let's not get ahead of ourselves.
 
 The finished sensors came at the **end of April**, so I set out to bring up these boards as well, as can be seen on the "productivity graph" - I actually couldn't take a break. The sensors turned out great. They ended up working much better than expected. Originally, I only really needed to detect a change in the moisture level, since this is just a proof-of-concept solution. Surprisingly, they can confidently measure relative soil moisture saturation, once properly calibrated.
 
-![]({% image_url bcs-thesis/sensor.png %})
-![]({% image_url bcs-thesis/moisture-cal.svg %})
+![]({% asset 2024/bcs-thesis/sensor.png %})
+![]({% asset 2024/bcs-thesis/moisture-cal.svg %})
 
 The Raspberry Pi Pico at the bottom served as a data logger, measuring the voltage of the sensor's battery. This was the only real letdown of the project since the battery life was pretty underwhelming. The sensor was not able to accumulate enough charge to last through the night, as can be seen in the soil moisture chart above. The poor battery performance was caused by a hardware problem on the communications module.
 
@@ -53,9 +53,9 @@ Throughout the project I needed to balance spending time on it, working around t
 
 # Documents
 
-- [Thesis]({% document_url bcs-thesis.pdf %}), ([official source - ČVUT DSpace](https://dspace.cvut.cz/handle/10467/115265))
-- [Supervisor's opinion]({% document_url bcs-thesis-supervisor.pdf %}), [opponent's opinion]({% document_url bcs-thesis-opponent.pdf %})
-- [Defense presentation]({% document_url bcs-thesis-presentation.pdf %}), [transcript]({% document_url bcs-thesis-transcript.pdf %})
+- [Thesis]({% asset 2024/bcs-thesis/bcs-thesis.pdf %}), ([official source - ČVUT DSpace](https://dspace.cvut.cz/handle/10467/115265))
+- [Supervisor's opinion]({% asset 2024/bcs-thesis/bcs-thesis-supervisor.pdf %}), [opponent's opinion]({% asset 2024/bcs-thesis/bcs-thesis-opponent.pdf %})
+- [Defense presentation]({% asset 2024/bcs-thesis/bcs-thesis-presentation.pdf %}), [transcript]({% asset 2024/bcs-thesis/bcs-thesis-transcript.pdf %})
 
 
 # Live Demo (Decommissioned)
@@ -69,7 +69,7 @@ Throughout the project I needed to balance spending time on it, working around t
         <canvas id="myChart" style="height:35vh"></canvas>
     </div>
     <div style="position: relative; height: 500px; float: right; margin: 5%;">
-        <img src="{% image_url bcs-thesis/preview.svg %}" alt="Soil moisture sensor" style="height: 500px;">
+        <img src="{% asset 2024/bcs-thesis/preview.svg %}" alt="Soil moisture sensor" style="height: 500px;">
         <label id="zone1" style="position: absolute; top: 130px; left: 20px; color: white;">N/A</label>
         <label id="zone2" style="position: absolute; top: 220px; left: 20px; color: white;">N/A</label>
         <label id="zone3" style="position: absolute; top: 305px; left: 20px; color: white;">N/A</label>

@@ -1,52 +1,29 @@
+require 'net/http'
+require 'uri'
+
+def check_exists(url)
+  uri = URI.parse(url)
+  request = Net::HTTP.new(uri.host, uri.port)
+  request.use_ssl = (uri.scheme == "https")
+  
+  response = request.request_head(uri.path) # Only request the header, not the full content
+  raise StandardError.new(url) unless response.code.to_i == 200
+  return url
+end
+
 module Jekyll
-  CONTENT_URL = "/assets/content"
+  CONTENT_URL = "https://assets.manakjiri.cz"
 
-  class VideoUrlTag < Liquid::Tag
+  class AssetTag < Liquid::Tag
     def initialize(tag_name, name, tokens)
       super
       @name = name.strip
     end
 
     def render(context)
-      "#{CONTENT_URL}/videos/#{@name}"
-    end
-  end
-
-  class DocumentUrlTag < Liquid::Tag
-    def initialize(tag_name, name, tokens)
-      super
-      @name = name.strip
-    end
-
-    def render(context)
-      "#{CONTENT_URL}/documents/#{@name}"
-    end
-  end
-
-  class ImageUrlTag < Liquid::Tag
-    def initialize(tag_name, name, tokens)
-      super
-      @name = name.strip
-    end
-
-    def render(context)
-      "#{CONTENT_URL}/images/#{@name}"
-    end
-  end
-
-  class IconUrlTag < Liquid::Tag
-    def initialize(tag_name, name, tokens)
-      super
-      @name = name.strip
-    end
-
-    def render(context)
-      "#{CONTENT_URL}/icons/#{@name}"
+      check_exists("#{CONTENT_URL}/#{@name}")
     end
   end
 end
 
-Liquid::Template.register_tag('video_url', Jekyll::VideoUrlTag)
-Liquid::Template.register_tag('document_url', Jekyll::DocumentUrlTag)
-Liquid::Template.register_tag('image_url', Jekyll::ImageUrlTag)
-Liquid::Template.register_tag('icon_url', Jekyll::IconUrlTag)
+Liquid::Template.register_tag('asset', Jekyll::AssetTag)

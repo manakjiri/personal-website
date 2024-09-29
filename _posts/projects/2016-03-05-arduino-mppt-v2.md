@@ -19,10 +19,12 @@ I picked those numbers deliberately because those are the specs of my 20 W polyc
 
 I later came up with a "scanning" MPPT algorithm (I have no idea whether this is used in the industry, I think there are better ways). Every couple of minutes or so it went through the entire duty cycle range of the DC-DC converter and took note of the duty cycle value which yielded the highest power output, then it sat on that value until the next scan. This worked quite well, in fact, it still sits on my bench and charges batteries to this day*. The SLA batteries themselves haven't aged very well, they hold a fraction of the rated capacity now.
 
-I managed to snag a bargain deal on a [240 W panel]({% image_url mppt-v2/mppt_240w_panel.jpg %}) but I haven't managed to mount it on the roof yet (I guess my old mounting technique wouldn't work so well this time). This MPPT isn't designed to handle this much power, so there is some demand for v3.0.
+I managed to snag a bargain deal on a [240 W panel]({% asset 2023/mppt-v2/mppt_240w_panel.jpg %}) but I haven't managed to mount it on the roof yet (I guess my old mounting technique wouldn't work so well this time). This MPPT isn't designed to handle this much power, so there is some demand for v3.0.
 
-[Some more documentation written in czech]({% document_url dokumentace_mppt_2016.pdf %}).
+[Some more documentation written in czech]({% asset 2023/mppt-v2/dokumentace_mppt_2016.pdf %}).
 
-{% include image-gallery.html folder="mppt-v2" %}
+![MPPT v2]({% asset 2023/mppt-v2/mppt_display.jpg %})
+![MPPT v2]({% asset 2023/mppt-v2/mppt_inside.jpg %})
+![MPPT v2]({% asset 2023/mppt-v2/mppt_pcb.jpg %})
 
 *I finally retired it in 2024 after the batteries reached the end of their life.

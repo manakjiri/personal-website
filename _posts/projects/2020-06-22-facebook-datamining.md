@@ -8,7 +8,7 @@ tags: [ml]
 
 How a random weekend project turned into my graduation work... In the beginning, it was just that. I wanted to learn how to work with databases. I figured that instead of using some random JSON example I could download my data from Facebook and use that instead.
 
-![]({% image_url facebook_graph.jpg %})
+![]({% asset 2023/facebook_graph.jpg %})
 
 I'm already satisfied with the basic functionality (the original objective) - the Python script counts the number of messages in a specified time frame, say a week, resulting in messages per week value which it then puts into a .csv chart. I can then take this file, open it in Excel and make a nice graph out of it.
 

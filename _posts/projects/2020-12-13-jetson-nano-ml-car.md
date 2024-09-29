@@ -10,7 +10,7 @@ This has been a dream of mine for quite some time - build (or at least attempt t
 
 Anyway, I needed some fun projects for the holidays so I decided to finally pursue this one. The objective isn't really to build a humanoid assistant to replace real people and friends or anything like that, it's mainly the idea of having a computer algorithm, which, by its very nature, is very deterministic and predictable (well, we developers might sometimes disagree with this wisdom until we reassure ourselves that the thing is doing exactly what it's told and that the problem resides somewhere between the chair and the keyboard, but I digress) and turn it into something that has a mind of its own (it will still obey every command I give it of course, it will be a computer after all, it will just mask it very well, or at least that's the idea).
 
-![]({% image_url pycar/pycar_frontangle.jpg %})
+![Jetson Nano powered RC car]({% asset 2023/pycar/pycar_frontangle.jpg %})
 
 The control is split into two parts - a microcontroller for the low-layer and real-time processing and a computer for the image processing and high-level control:
  * The computer is a [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) from nVidia
@@ -25,4 +25,4 @@ The control is split into two parts - a microcontroller for the low-layer and re
     + It acts as a watchdog for the Jetson and goes into a failsafe if it doesn't hear from the Jetson for too long
     + Finally it does some housekeeping stuff like checking the battery voltage, cleaning up the data from the sensors, and calibrating them
 
-{% include image-gallery.html folder="pycar" %}
+![Jetson Nano powered RC car]({% asset 2023/pycar/pycar_top.jpg %})
