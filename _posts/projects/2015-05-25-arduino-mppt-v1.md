@@ -9,4 +9,5 @@ An MPPT prototype and foundation of the [second version]({% post_url /projects/2
 
 I took some inspiration from Julian Ilett's [MPPT](https://www.youtube.com/watch?v=MSz4-cr3EJw).
 
-{% include image-gallery.html folder="mppt-v1" %}
+![MPPT v1]({% asset 2023/mppt-v1/mppt_v1.jpg %})
+![MPPT v1]({% asset 2023/mppt-v1/mppt_v1_display.jpg %})

@@ -10,7 +10,8 @@ I got into this project mainly because I finally wanted to turn my peer-to-peer 
 
 The protocol, which I've come to call the Tiny Secure Protocol Stack, TSPS in short, does exactly what its name suggests - a very small footprint, built-in encryption of the payload, and support for encapsulation. I wrote a summary of the features, design, and implementation, but it is only available in Czech.
 
-LoRaSTM\_demo [(mp4)]({% video_url LoRaSTM_demo.mp4 %}) [(webm)]({% video_url LoRaSTM_demo.webm %}), [TSPS whitepaper]({% document_url dokumentace_tsps.pdf %})
+LoRaSTM\_demo [(mp4)]({% asset 2023/lorastm/LoRaSTM_demo.mp4 %}) [(webm)]({% asset 2023/lorastm/LoRaSTM_demo.webm %}), [TSPS whitepaper]({% asset 2023/lar-car/dokumentace_tsps.pdf %})
 
-{% include image-gallery.html folder="lorastm" %}
+![LoRaSTM wireless dev-board]({% asset 2023/lorastm/LoRaSTM.jpg %})
+![LoRaSTM wireless dev-board]({% asset 2023/lorastm/LoRaSTM_back.jpg %})
 

@@ -7,7 +7,7 @@ tags: [rc]
 
 We don't call these drones, they are quadcopters, quads for short. FPV stands for First Person View, which is exactly what it sounds like - you have a camera and a video transmitter on the quad, a monitor, or preferably FPV goggles with a video receiver on the ground. It enables you to see the world from the quad's perspective, which opens up a whole range of possibilities, as you can imagine. This is usually an old-school analog system with low resolution and bad image quality but also very low latency and predictable deterioration when the signal gets weaker.
 
-![]({% image_url quadcopter/quad_1.jpg %})
+![]({% asset 2023/quadcopter/quad_1.jpg %})
 
 The one you can see above is my latest one:
  * Quad itself:
@@ -34,4 +34,13 @@ One of the first questions people have, after asking about the range, maximum sp
 
 Some of my flight videos: [The Best FPV Moments of 2017](https://www.youtube.com/watch?v=7sWXnBD_3wk), [Exploring new places](https://www.youtube.com/watch?v=lZ6qBc3ujX4), [Flow - FPV practice](https://www.youtube.com/watch?v=idLPhe0tJ7k)
 
-{% include image-gallery.html folder="quadcopter" %}
+![Quadcopter]({% asset 2023/quadcopter/quad_aomway_goggles.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_field_repairs.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_charging.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_charging_1.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_charging_2.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_on_a_bench.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_pink_props.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_scenique.jpg %})
+![Quadcopter]({% asset 2023/quadcopter/quad_1.jpg %})
+

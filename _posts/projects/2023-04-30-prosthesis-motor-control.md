@@ -5,6 +5,6 @@ category: project
 tags: [university, notable-project]
 ---
 
-![]({% image_url ari-motor-control/dut.jpg %})
+![]({% asset 2023/ari-motor-control/dut.jpg %})
 
-[Paper describing the control solution (Czech)]({% document_url ari-motor-control.pdf %})
+[Paper describing the control solution (Czech)]({% asset 2023/ari-motor-control/ari-motor-control.pdf %})

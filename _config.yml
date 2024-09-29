@@ -45,7 +45,7 @@ author:
   title: *author
   name: *author
   bio: *description
-  avatar: /assets/content/images/avatar.jpeg
+  avatar: https://assets.manakjiri.cz/avatar.jpeg
   email: *email
   username: *username
   github: *github_username

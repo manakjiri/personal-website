@@ -5,4 +5,6 @@ category: project
 tags: [arduino]
 ---
 
-{% include image-gallery.html folder="power-bank" %}
+![Powerbank]({% asset 2023/power-bank/powerbank_charging.gif %})
+![Powerbank]({% asset 2023/power-bank/power_bank_inside.jpg %})
+![Powerbank]({% asset 2023/power-bank/power_bank_pcb.jpg %})

@@ -3,61 +3,49 @@ name: Build and deploy to manakjiri.cz
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch:
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ['self-hosted', 'docker']
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Jekyll
-        run: |
-          rbenv install --skip-existing
-          gem install bundler
-          bundle install
-
-      - name: Mount Assets
-        run: |
-          mkdir -p ./assets/content
-          mount ./assets/content
-      
-      - name: Build Site
-        run: bundle exec jekyll build --trace --future --verbose
-      
-      - name: Check for missing assets
-        run: |
-          if [ -f _site/missing_assets.txt ]; then
-            echo "Missing assets:"
-            cat _site/missing_assets.txt
-            exit 1
-          fi
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-      - name: Unmount Assets
-        if: always()
-        run: umount ./assets/content
-
-  # Deploy job
-  deploy:
-    # Add a dependency to the build job
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --trace --future --verbose
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: _site/
+          name: webroot
+          retention-days: 3
+          overwrite: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: webroot
+          path: webroot
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy webroot --project-name=manakjiri-website --commit-dirty=true
