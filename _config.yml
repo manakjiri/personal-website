@@ -38,17 +38,6 @@ defaults:
       permalink: "project/:title/"
       category: projects
 
-# Jekyll Compose default front matter
-jekyll_compose:
-  post_default_front_matter:
-    modified:
-    tags: []
-    description:
-  draft_default_front_matter:
-    modified:
-    tags: []
-    description:
-
 # Build settings
 number_of_posts: 3 # Homepage limit posts
 sass:
