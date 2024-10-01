@@ -2,12 +2,13 @@ require 'net/http'
 require 'uri'
 
 def check_exists(url)
-  uri = URI.parse(url)
-  request = Net::HTTP.new(uri.host, uri.port)
-  request.use_ssl = (uri.scheme == "https")
-  
-  response = request.request_head(uri.path) # Only request the header, not the full content
-  raise StandardError.new(url) unless response.code.to_i == 200
+  if ENV.key?('JEKYLL_ENV') && ENV['JEKYLL_ENV'] == 'production'
+    uri = URI.parse(url)
+    request = Net::HTTP.new(uri.host, uri.port)
+    request.use_ssl = (uri.scheme == "https")
+    response = request.request_head(uri.path) # Only request the header, not the full content
+    raise StandardError.new(url) unless response.code.to_i == 200
+  end
   return url
 end
 
