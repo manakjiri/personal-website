@@ -143,10 +143,10 @@ ul {
     text-align: -webkit-match-parent;
   }
   li::before {
-    content: "\FE63";
+    content: "\2022";
     display: inline-block;
-    top: -1px;
-    width: 1.2em;
+    //top: -1px;
+    width: 1em;
     position: relative;
     margin-left: -1.3em;
     font-weight: 700;
