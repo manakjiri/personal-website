@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # This is where you manage which Jekyll version is used to run.
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.3.4"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
