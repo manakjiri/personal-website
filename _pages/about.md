@@ -16,48 +16,50 @@ Also likes to venture into high-performance backend services, deployment and app
 
 ## Work Experience
 
-__Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Jan 2022 - now)__
+**Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Jan 2021 - Jul 2022 - now)**
 
 Joined the core team to help out with the firmware development initially, gradually transitioned into a team lead, and finally also took on most of the high-level product design. My responsibilities include
 
 - Leading a team of firmware developers, a hardware designer and a full-stack web developer
-    - Two major hardware platform redesigns took place over the course of my involvement, we have perfected it and kept up with the changing requirements; designing, manufacturing, and bringing up five hardware revisions in total
-    - The team also delivered robust, maintainable, and testable firmware for all the sub-components within the product. Challenges included motor control, detection of abnormal events, and muscle signal processing
-    - We developed a web-based configuration interface for internal uses and training as well as a mobile application for customer use.
+  - Two major hardware platform redesigns took place over the course of my involvement, we have perfected it and kept up with the changing requirements; designing, manufacturing, and bringing up five hardware revisions in total
+  - The team also delivered robust, maintainable, and testable firmware for all the sub-components within the product. Challenges included motor control, detection of abnormal events, and muscle signal processing
+  - We developed a web-based configuration interface for internal uses and training as well as a mobile application for customer use.
 - Overlooking quality assurance and testing, CI/CD and documentation
-    - All major release and packaging tasks are automated.
+  - All major release and packaging tasks are automated.
 - Coordinating design and manufacturing with other teams and external partners
-    - Mechanical design for packaging, motor drive, and control capability assessment
-    - PCB manufacturing and assembly with local and overseas vendors.
+  - Mechanical design for packaging, motor drive, and control capability assessment
+  - PCB manufacturing and assembly with local and overseas vendors.
 
 <!-- The electronics need to conform to the specific requirements of the product, which is built unique for each customer. The tech needs to get out of the way of mechanical parts, to keep the aesthetics and rigidity, while working with tight power and space constraints. With each iteration we managed to better integrate the design, optimize for assembly, increase observability of anomalies and decrease the power consumption. -->
 
-
-__Software Engineer at [Prusa Research](https://www.prusa3d.com/) (Dec 2021 – Jul 2022)__
+**Software Engineer at [Prusa Research](https://www.prusa3d.com/) (Dec 2021 – Jul 2022)**
 
 - Developing firmware for the next generation of 3D printers
 - Worked with STM32 microcontrollers, Embedded linux, Yocto, C, Python
 
-
-__Systems Developer at [TTC MARCONI](https://ttc-marconi.com/) (Apr 2020 - Dec 2021)__
+**Systems Developer at [TTC MARCONI](https://ttc-marconi.com/) (Apr 2020 - Dec 2021)**
 
 - Ground-up firmware development of a new PLC-like product based on STM32
 - TCP/IP (lwip), Modbus, real-time industrial control, Python support tools
 - Writing documentation and bring-up procedures for manufacturing
 
-
-__Intern at [egmenergo](https://www.egmenergo.cz/) (Jul 2019 – Aug 2019)__
+**Intern at [egmenergo](https://www.egmenergo.cz/) (Jul 2019 – Aug 2019)**
 
 - Firmware and Software development
 - STM32 and Atmel microcontrollers, Embedded linux, Python
 
-
 ## Education
 
-__Faculty of Electrical Engineering CTU (2020 - 2024)__
+**[Faculty of Informatics CTU](https://fit.cvut.cz) (2024 - now)**
+
+- Software Engineering (MSc)
+
+**[Faculty of Electrical Engineering CTU](https://fel.cvut.cz) (2020 - 2024)**
+
 - Cybernetics and Robotics (BSc) [[bachelor's thesis blog post]]({% post_url /projects/2024-04-25-bcs-thesis %})
 
+**Grammar School Uherské Hradiště (2012 - 2020)**
 
-__Grammar School Uherské Hradiště (2012 - 2020)__
+## Contact
 
-
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/{{ site.linkedin_username }})
