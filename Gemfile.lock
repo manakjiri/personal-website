@@ -85,7 +85,7 @@ DEPENDENCIES
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
   jekyll-target-blank (~> 2.0.2)
-  json
+  json (~> 2.7.2)
 
 BUNDLED WITH
    2.4.18
