@@ -1,5 +1,6 @@
 ---
 layout: home
+permalink: /
 ---
 
 Welcome to my portfolio website, where I maintain a list of personal and work-related projects, notable events, and references. 
