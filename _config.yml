@@ -46,7 +46,9 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-postfiles
+  - jekyll-target-blank
 
 # Theme specific.
 author:

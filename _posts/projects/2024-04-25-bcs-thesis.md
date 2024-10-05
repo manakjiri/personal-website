@@ -6,6 +6,12 @@ category: project
 tags: [university, stm32, iot, notable-project]
 ---
 
+# Documents
+
+- [Thesis]({% asset 2024/bcs-thesis/bcs-thesis.pdf %}), ([official source - ČVUT DSpace](https://dspace.cvut.cz/handle/10467/115265))
+- [Supervisor's opinion]({% asset 2024/bcs-thesis/bcs-thesis-supervisor.pdf %}), [opponent's opinion]({% asset 2024/bcs-thesis/bcs-thesis-opponent.pdf %})
+- [Defense presentation]({% asset 2024/bcs-thesis/bcs-thesis-presentation.pdf %}), [transcript]({% asset 2024/bcs-thesis/bcs-thesis-transcript.pdf %})
+
 # Introduction
 
 Picking the topic was mainly motivated by wanting to upgrade and evolve our [LoRa-based home automation system]({% post_url /projects/2021-06-29-lorastm-home-automation-system %}). That in itself constitutes the LoRa part, but the "Smart Agriculture" part is the result of finding a supervisor, who himself suggested the topic of soil moisture sensing, which was an amazing coincidence given my long-standing [Wireless soil moisture sensor project]({% post_url /projects/2020-04-20-wireless-soil-moisture-sensors %}).
@@ -50,13 +56,6 @@ The Raspberry Pi Pico at the bottom served as a data logger, measuring the volta
 # Final remarks
 
 Throughout the project I needed to balance spending time on it, working around the relatively long lead times for manufacturing, and managing a team of developers at work. Initially, I may have wanted to spend a lot more time and effort on some of its aspects, but in the end prioritized what mattered the most - to deliver a finished and well-rounded solution with all the requisite testing and extensive documentation in the form of the thesis. I am glad this was positively reflected upon in the final opinions.
-
-# Documents
-
-- [Thesis]({% asset 2024/bcs-thesis/bcs-thesis.pdf %}), ([official source - ČVUT DSpace](https://dspace.cvut.cz/handle/10467/115265))
-- [Supervisor's opinion]({% asset 2024/bcs-thesis/bcs-thesis-supervisor.pdf %}), [opponent's opinion]({% asset 2024/bcs-thesis/bcs-thesis-opponent.pdf %})
-- [Defense presentation]({% asset 2024/bcs-thesis/bcs-thesis-presentation.pdf %}), [transcript]({% asset 2024/bcs-thesis/bcs-thesis-transcript.pdf %})
-
 
 # Live Demo (Decommissioned)
 
