@@ -16,7 +16,7 @@ Also likes to venture into high-performance backend services, deployment and app
 
 ## Work Experience
 
-**Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Jan 2021 - Jul 2022 - now)**
+**Technical Lead at [Z-Bionics](https://www.z-bionics.com/) (Jan 2021 - Jul 2022 - Oct 2024)**
 
 Joined the core team to help out with the firmware development initially, gradually transitioned into a team lead, and finally also took on most of the high-level product design. My responsibilities include
 
