@@ -3,7 +3,11 @@
   external: false
 
 - title: projects
-  url: /project-list/
+  url: /project/
+  external: false
+
+- title: pythonoviny
+  url: /pythonoviny/
   external: false
 
 - title: references

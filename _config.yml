@@ -37,6 +37,13 @@ defaults:
     values:
       permalink: "project/:title/"
       category: projects
+  # Pythonoviny
+  - scope:
+      path: "_posts/pythonoviny"
+      type: posts
+    values:
+      permalink: "pythonoviny/:title/"
+      category: pythonoviny
 
 # Build settings
 number_of_posts: 3 # Homepage limit posts

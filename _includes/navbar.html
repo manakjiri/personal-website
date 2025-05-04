@@ -165,7 +165,9 @@
         {%- assign menus = site.data.menus -%}
         {%- if menus %}
           {%- for menu in menus -%} 
-            {%- if url == menu.url -%}
+            {%- if menu.url == '/' and url == '/' -%}
+              <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
+            {%- elsif menu.url != '/' and url contains menu.url -%}
               <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
             {%- else -%} 
               {%- if menu.external -%}
@@ -181,9 +183,6 @@
               {%- endif -%} 
             {%- endif -%} 
           {%- endfor -%}
-        {%- else -%}
-          <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">home</a>
-          <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">about</a>
         {%- endif -%}
       </div>
     </div>
