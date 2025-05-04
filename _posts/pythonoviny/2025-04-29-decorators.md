@@ -38,7 +38,7 @@ def passthrough(func):
         return func(*args, **kwargs)
     return inner
 ```
-This is the simplest decorator you can come up with - as the name suggests, it does nothing. It simply calls the decorated function with the provided arguments and returns its result. Let's break-down what is happening here
+This is the simplest decorator I could come up with - as the name suggests, it does nothing. It simply calls the decorated function with the provided arguments and returns its result. Let's break-down what is happening here
 - the outer function (named `passthrough`) serves as a vessel for your decorator implementation, its only job is to receive the decorated function and return the inner one, which usually does all the magic
 - the inner function is actually responsible for executing the provided function. You could log the arguments and the return value, you could do some generic error handling, or implement retry logic - that is the beauty (and perhaps also the curse) of decorators, they give you full control
 
@@ -52,7 +52,7 @@ print(test(42)) # prints "I got 42"
 
 There is one problem however - even in this very simple example. Today's Python developer experience is powered by type hints, but even this decorator with its completely generic definition inadvertently swallows any information about the wrapped function. Your IDE does not know which arguments your functions take and what they return - a huge pain.
 
-Recently (with the help of Martin and Roman) I wrote a decorator, which converts any sync method into an async one. In the process, we came up with type-hints, that fix this and I want to provide you this universal copy-paste-able snippet, which you can use anywhere and bring your type hints back!
+Recently my colleagues and I wrote a decorator, which converts any sync method into an async one. In the process, we came up with type-hints which fix this and I want to provide you this universal copy-paste-able snippet, which you can use anywhere and bring your type hints back!
 ```python
 import functools
 import typing as t
@@ -80,8 +80,11 @@ class TestClass:
 
 print(TestClass().test(42)) # also prints "I got 42"
 ```
-This example works well for methods, but you can easily adapt it to generic functions by removing `SelfType` and `Concatenate`. ![[Screenshot 2025-04-30 at 19.08.08.png]]
+This example works well for methods, but you can easily adapt it to generic functions by removing `SelfType` and `Concatenate`.
 
-†I am simplifying - what actually happens is that when a decorated function is defined, the decorator is applied immediately, replacing the original function with the decorated version. Subsequent calls to the function invoke this new, decorated version.
+![Fig4]({% asset 2025/pythonoviny/decorators-types.png %})
+*Type hints work!*
 
-Note: `ParamSpec` and `Concatenate` were introduced in Python 3.10. If you're using an earlier version of Python or certain type checkers, these features might not be available or fully supported.
+†*I am simplifying - what actually happens is that when a decorated function is defined, the decorator is applied immediately, replacing the original function with the decorated version. Subsequent calls to the function invoke this new, decorated version.*
+
+*Note: `ParamSpec` and `Concatenate` were introduced in Python 3.10. If you're using an earlier version of Python or certain type checkers, these features might not be available or fully supported.*

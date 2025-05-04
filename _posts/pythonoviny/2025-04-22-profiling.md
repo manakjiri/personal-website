@@ -23,9 +23,9 @@ The trade-off is that you lose insight into actual code flow, so this approach i
 As you might expect, you can combine these two approaches and get more creative. I am including this section mainly because of [scalene](https://github.com/plasma-umass/scalene), which promises to do it all, even including GPU and memory - we will explore this in the future.
 
 ## Visualizing the data
-Once the profiler's job finished, we need to make sense of the data it created. Some tools have this capability built-in, most are able to export into widely compatible formats, such as `callgrind` and `pstats`. There are many tools such as [snakeviz](https://jiffyclub.github.io/snakeviz/), [speedscope](https://www.speedscope.app/) and many others.
+Once the profiler's job is finished, we need to make sense of the data it created. Some tools have this capability built-in, most are able to export into widely compatible formats, such as `callgrind` and `pstats`. There are many tools such as [snakeviz](https://jiffyclub.github.io/snakeviz/), [speedscope](https://www.speedscope.app/) and many others.
 
-To give you an example, I used `yappi` to instrument my DataDog connector I just wrote for Lumos. I set yappi to track the "cpu" clock to ignore the network IO wait.
+To give you an example, I used `yappi` to instrument a service I just wrote for one of our customers. I set yappi to track the "cpu" clock to ignore the network IO wait.
 ```python
 if __name__ == "__main__":
     yappi.set_clock_type("CPU")
@@ -39,3 +39,12 @@ I called the `list_accounts` capability and using `gprof2dot -f pstats profile.p
 When we zoom in (fig 2), we can indeed find the `list_accounts` function and see that the program spent 71% of the total CPU time just in that. Looking around a bit more, it seems like `re.compile` was called 130 times in total (fig 3), which makes out a third of our total runtime. Finally, we can take a look at the machinery of async-await (fig 4) we talked about last week, and as we might expect for such a IO bound application, there is a lot of activity in the event loop.
 
 I hope this was a useful introduction to profiling in Python. Many of these approaches and tools also translate to other technologies, so take a look at what's available for your tech stack.
+
+![Fig1]({% asset 2025/pythonoviny/profiler-fig1.png %})
+*fig 1.*
+![Fig2]({% asset 2025/pythonoviny/profiler-fig2.png %})
+*fig 2.*
+![Fig3]({% asset 2025/pythonoviny/profiler-fig3.png %})
+*fig 3.*
+![Fig4]({% asset 2025/pythonoviny/profiler-fig4.png %})
+*fig 4.*
