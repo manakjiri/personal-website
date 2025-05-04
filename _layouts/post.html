@@ -68,9 +68,7 @@ layout: compress
       <small class="post-updated-at">Last updated on {{page.date | date: "%B %d, %Y"}}</small>
     {% endif %}
 
-    {% if page.next or page.previous %}
-      {% include navigation.html %}
-    {% endif %}
+    {% include navigation.html %}
 
     {% include footer.html %}
   </div>
