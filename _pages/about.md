@@ -52,7 +52,7 @@ Joined the core team to help out with the firmware development initially, gradua
 
 ## Education
 
-**[Faculty of Informatics CTU](https://fit.cvut.cz) (2024 - now)**
+**[Faculty of Informatics CTU](https://fit.cvut.cz) (2024 - 2025)**
 
 - Software Engineering (MSc)
 
