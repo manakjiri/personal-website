@@ -42,7 +42,7 @@ defaults:
       path: "_posts/pythonoviny"
       type: posts
     values:
-      permalink: "pythonoviny/:title/"
+      permalink: "pythonoviny/:year/:title/"
       category: pythonoviny
 
 # Build settings
