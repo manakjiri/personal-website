@@ -7,7 +7,7 @@ I hear you say: "Python is a high-level language, we do not need to worry about 
 
 ## Reference Counting
 
-The main garbage collection algorithm used by CPython is reference counting. The basic idea is that CPython counts how many different places there are that have a reference to an object [1]. When an object’s reference count becomes zero, the object is deallocated. Python provides built-in tools for querying the number of references
+The main garbage collection algorithm used by CPython is reference counting. The basic idea is that CPython counts how many different places there are that have a reference to an object [[1]]. When an object’s reference count becomes zero, the object is deallocated. Python provides built-in tools for querying the number of references
 
 ```python
 >>> import sys
