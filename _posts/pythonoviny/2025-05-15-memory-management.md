@@ -22,7 +22,7 @@ The main garbage collection algorithm used by CPython is reference counting. The
 2
 ```
 
-Reference counting is predictable and relatively easy to implement [2]. One of its main disadvantages, which Python also needs to solve, are reference cycles.
+Reference counting is predictable and relatively easy to implement [[2]]. One of its main disadvantages, which Python also needs to solve, are reference cycles.
 
 ```python
 >>> container = []
@@ -56,7 +56,7 @@ You may be saying that this kind of code must be rare, so why even worry about t
 
 The cyclic garbage collector is the Python's solution to the imperfect reference counting mechanism. When it gets triggered, it scans all objects and removes those that are not reachable by the program. The amazing [1][CPython's Internal Documentation] covers it in much more detail.
 
-The GC runs when a certain number of allocations (object creations) and deallocations (object deletions) occurr. When the GC runs, it causes a *stop the world* event, which **pauses** your program's execution for the duration of the GC scan. Figuring out which objects are inaccesible is actually a pretty complicated process and could take quite a while [1]. You can actually know exactly when this happens, because Python allows you to register callbacks through the `gc` module [3].
+The GC runs when a certain number of allocations (object creations) and deallocations (object deletions) occurr. When the GC runs, it causes a *stop the world* event, which **pauses** your program's execution for the duration of the GC scan. Figuring out which objects are inaccesible is actually a pretty complicated process and could take quite a while [[1]]. You can actually know exactly when this happens, because Python allows you to register callbacks through the `gc` module [[3]].
 
 ```python
 import gc
@@ -82,7 +82,7 @@ GC stop: {'generation': 0, 'collected': 2080, 'uncollectable': 0} 80 us
 GC start: {'generation': 2, 'collected': 0, 'uncollectable': 0}
 GC stop: {'generation': 2, 'collected': 828, 'uncollectable': 0} 247 us
 ```
-*(notice that I added time measurements showing how long it took from start to finish of each GC run. Also notice that the GC seems to run after about 2000 objects are accumulated, which is the default threshold [3])*
+*(notice that I added time measurements showing how long it took from start to finish of each GC run. Also notice that the GC seems to run after about 2000 objects are accumulated, which is the default threshold [[3]])*
 
 ## How are Python objects represented?
 
