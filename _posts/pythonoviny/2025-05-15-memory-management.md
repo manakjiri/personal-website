@@ -54,7 +54,7 @@ You may be saying that this kind of code must be rare, so why even worry about t
 
 ## Cyclic Garbage Collector
 
-The cyclic garbage collector is the Python's solution to the imperfect reference counting mechanism. When it gets triggered, it scans all objects and removes those that are not reachable by the program. The amazing [1][CPython's Internal Documentation] covers it in much more detail.
+The cyclic garbage collector is the Python's solution to the imperfect reference counting mechanism. When it gets triggered, it scans all objects and removes those that are not reachable by the program. The amazing [CPython's Internal Documentation][1] covers it in much more detail.
 
 The GC runs when a certain number of allocations (object creations) and deallocations (object deletions) occurr. When the GC runs, it causes a *stop the world* event, which **pauses** your program's execution for the duration of the GC scan. Figuring out which objects are inaccesible is actually a pretty complicated process and could take quite a while [[1]]. You can actually know exactly when this happens, because Python allows you to register callbacks through the `gc` module [[3]].
 
