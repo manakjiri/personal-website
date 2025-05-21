@@ -1,3 +1,12 @@
+@use "../variables" as *;
+
+// Clearfix
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 // Reset some basic elements
 * {
   -webkit-transition: background-color 75ms ease-in, border-color 75ms ease-in;
@@ -133,7 +142,7 @@ figure > img {
 figcaption {
   font-size: 13px;
   text-align: center;
-}
+} 
 
 // List
 ul {
@@ -340,13 +349,6 @@ table {
     border: 1px solid $light;
     padding: 2px 7px;
   }
-}
-
-// Clearfix
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 // When mouse block a text set this color
