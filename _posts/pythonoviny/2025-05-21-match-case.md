@@ -31,7 +31,7 @@ match number:
     case n:
         print("Something else:", n)
 ```
-The two approaches are functionally identical. At the cost of one extra indentation level we gained some readability, ease of refactoring and potentially a more error-proof peice of code since the `n` variable for the "else" case of the match statement is a distinct instance from the original `number` variable, so modifying `n` will not change `number`. This is a win in my opinion, it does not duplicate the variable name and shows the intent clearly.
+The two approaches are functionally identical. At the cost of one extra indentation level we gained some readability, ease of refactoring and potentially a more error-proof piece of code since the `n` variable for the "else" case of the match statement is a distinct instance from the original `number` variable, so modifying `n` will not change `number`. This is a win in my opinion, it does not duplicate the variable name and shows the intent clearly.
 
 Python’s `match-case` shines when working with structured data—especially tuples, lists, or custom objects.
 
@@ -133,7 +133,7 @@ handle_path("/photo/vacation/2025")     # Media path: ['vacation', '2025']
 ```
 This really sets apart `match-case` and `if-else` approaches, where in the latter case you'd have to write a lot more code to achieve the same thing. I also like how this uses the well-established unpacking pattern for sequences.
 
-If you want to find out more about this feature, checkout the [official tutorial][5]. I also found [Ben Hoyt's article][6] insigtful as he took the time to analyze existing code-bases for potential use-cases of this new feature and explored whether they would be a good fit for refactoring, while being more critical of its introduction.
+If you want to find out more about this feature, checkout the [official tutorial][5]. I also found [Ben Hoyt's article][6] insightful as he took the time to analyze existing code-bases for potential use-cases of this new feature and explored whether they would be a good fit for refactoring, while being more critical of its introduction.
 
 
 [1]: https://docs.python.org/3/whatsnew/3.10.html
