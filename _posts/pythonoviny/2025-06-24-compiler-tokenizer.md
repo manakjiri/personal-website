@@ -24,7 +24,7 @@ The first step in compiling the source is tokenization. This makes the PEG parse
 It is common among PEG parser frameworks that the parser does both the parsing and the tokenization, but this does not happen in Pegen. The reason is that the Python language needs a custom tokenizer to handle things like indentation boundaries, some special keywords like `ASYNC` and `AWAIT` (for compatibility purposes), backtracking errors (such as unclosed parenthesis), dealing with encoding, interactive mode and much more. Some of these reasons are also there for historical purposes, and some others are useful even today [[3]].
 
 It is amazing that we can easily take a look at how these tokens are actually constructed [in the code][4]:
-```C
+```c
 int
 _PyToken_OneChar(int c1)
 {
