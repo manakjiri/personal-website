@@ -3,9 +3,9 @@ layout: post
 title: "Python's Compiler: Source Code Tokenizer"
 ---
 
-This is the part 1 of a 5 part series about the Python's compiler - the part of CPython which takes your scripts and tranforms them into Python bytecode, which is then executed by the interpreter.
+This is the part 1 of a 5 part series about the Python's compiler - the part of [CPython](/pythonoviny/2025/welcome) which takes your scripts and tranforms them into Python bytecode, which is then executed by the interpreter.
 
-If you already feel lost after the first sentence - I got you, but I promise the following article(s) will be full of practical examples of foundational Computer Science concepts, which are worth learning about. I'll provide links to source code and internal documentation along the way and try to exmplain everything in plain English - let's learn together.
+If you already feel lost after the first sentence - I got you, but I promise the following article(s) will be full of practical examples of foundational Computer Science concepts, which are worth learning about. I'll provide links to source code and internal documentation along the way and try to explain everything in plain English - let's learn together.
 
 The compilation (the process of translating high-level code into low-level code [[1]]) happens in 5 steps [[2]] (hence 5 articles):
 
@@ -25,7 +25,6 @@ It is common among PEG parser frameworks that the parser does both the parsing a
 
 It is amazing that we can easily take a look at how these tokens are actually constructed [in the code][4]:
 ```C
-...
 int
 _PyToken_OneChar(int c1)
 {
