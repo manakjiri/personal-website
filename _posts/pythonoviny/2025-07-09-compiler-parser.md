@@ -7,7 +7,7 @@ Welcome to the second article in our [5-part series about the CPython compiler](
 
 > 2. The tokens are parsed into an Abstract Syntax Tree (a tree-like representation of the syntactic structure of source code - much easier for machines to understand than written text - it captures the structure, not the meaning)
 
-Historically, Python (like many languages) used an LL(1) parser—in Python’s case, it was a hand-written recursive descent parser that could only look one token ahead. The LL(1) approach has some limitations:
+Historically, Python (like many languages) used an LL(1) parser — in Python’s case, it was a hand-written recursive descent parser that could only look one token ahead. The LL(1) approach has some limitations:
 
 - Limited Grammar: Only certain grammar structures are supported; [left recursion](https://peps.python.org/pep-0617/#lack-of-left-recursion) and [whitespace-sensitive constructs are tricky](https://github.com/python/cpython/issues/56991).
 - Ambiguity: Some new features were very hard to add to the language (e.g., the ["match/case" syntax](/pythonoviny/2025/match-case)).
@@ -58,7 +58,7 @@ print(ast.dump(ast.parse("def foo()"), indent=4))
 
 You can view the full grammar definition on [GitHub](https://github.com/python/cpython/blob/main/Grammar/python.gram). It consists of many rules that define the syntax of the entire Python language. The actual parser implementation (C code) is generated from this file by a program called [pegen](https://github.com/python/cpython/tree/main/Tools/peg_generator/pegen).
 
-The grammar (including inline comments) totals around 1500 lines, because even something as "simple" as function arguments can take on many different forms. The following excerp from the grammar includes the rules for *one* paramater of a function:
+The grammar (including inline comments) totals around 1500 lines, because even something as "simple" as function arguments can take on many different forms. The following excerpt from the grammar includes the rules for **one** parameter of a function:
 
 ```
 # One parameter.  This *includes* a following comma and type comment.
