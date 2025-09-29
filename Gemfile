@@ -13,4 +13,4 @@ group :jekyll_plugins do
 end
 
 # archlinux does not install json by default
-gem "json", "~> 2.13.2"
+gem "json", "~> 2.15.0"
